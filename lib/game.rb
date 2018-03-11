@@ -102,11 +102,13 @@ class Game
      end
 
 
-   puts "Play again? (Y/N)"
-   input3 = gets.strip
+    puts "Play again? (Y/N)"
+    input3 = gets.strip
 
    if input3 == "Y"
      Game.new.start
    else input3 == "N"
      puts "Thanks for playing!"
    end
+ end
+ end
