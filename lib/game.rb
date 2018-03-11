@@ -97,8 +97,10 @@ class Game
          loss_count += 1
        end
      count += 1
+     puts win_count
+     puts loss_count
      end
-     
+
 
    puts "Play again? (Y/N)"
    input3 = gets.strip
