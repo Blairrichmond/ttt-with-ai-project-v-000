@@ -2,8 +2,8 @@
 
 require_relative '../config/environment'
 
-puts "Welcome to Tic-tac-toe!"
-puts "How many players?"
+puts "Welcome to Tic-tac-toe."
+puts "How many players would you like?"
 input = gets.strip
 
 if input == "2"
@@ -15,7 +15,7 @@ elsif input == "1"
     Game.new(Players::Human.new("X"), Players::Computer.new("O"), Board.new).play
   elsif
     Game.new(Players::Computer.new("X"), Players::Human.new("O"), Board.new).play
-  
+
 else input == "0"
   Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new).play
 end
@@ -34,7 +34,7 @@ end
   puts loss_count
 end
 
-puts "Would you like to play again? (Y/N)"
+puts "Play again? (Y/N)"
 input3 = gets.strip
 
 if input3 == "Y"
