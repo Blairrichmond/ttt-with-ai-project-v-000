@@ -81,22 +81,26 @@ class Game
      input2 = gets.strip
      if input2 == "X"
        Game.new(Players::Human.new("X"), Players::Computer.new("O"), Board.new).play
-     end
-   elsif input == "0"
+     elsif
+       Game.new(Players::Computer.new("X"), Players::Human.new("O"), Board.new).play
+
+   else input == "0"
      Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new).play
    end
-   count = 0
-   win_count = 0
-   loss_count = 0
-     if game
-     win_count += 1
-     else
-       loss_count += 1
+     count = 0
+     win_count = 0
+     loss_count = 0
+       game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new).play
+       if game
+       win_count += 1
+       else
+         loss_count += 1
+       end
+     count += 1
      end
-   count += 1
-   puts win_count
-   puts loss_count
-
+     puts win_count
+     puts loss_count
+   end
 
    puts "Play again? (Y/N)"
    input3 = gets.strip
@@ -106,6 +110,7 @@ class Game
    else input3 == "N"
      puts "Thanks for playing!"
    end
+
 
  end
 end
