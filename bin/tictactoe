@@ -22,7 +22,6 @@ require_relative '../config/environment'
   puts win_count
   puts loss_count
 end
-end
   puts "Play again? (Y/N)"
   input3 = gets.strip
 
