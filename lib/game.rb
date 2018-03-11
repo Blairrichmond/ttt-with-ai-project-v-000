@@ -110,4 +110,3 @@ class Game
    else input3 == "N"
      puts "Thanks for playing!"
    end
-end
