@@ -20,7 +20,7 @@ require_relative '../config/environment'
   count = 0
   win_count = 0
   loss_count = 0
-    if win?
+    if Game.won?
     win_count += 1
     else
       loss_count += 1
