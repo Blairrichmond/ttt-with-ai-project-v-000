@@ -17,8 +17,6 @@ require_relative '../config/environment'
   elsif input == "0"
     Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new).play
   end
-  puts win_count
-  puts loss_count
 
   puts "Play again? (Y/N)"
   input3 = gets.strip
